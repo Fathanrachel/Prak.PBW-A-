@@ -29,7 +29,7 @@
 
 ## Kontribusi
 
-Dibuat oleh [Nama Anda].
+Dibuat oleh [Muhammad Rachel Fathan Idzhany].
 
 ## Lisensi
 
