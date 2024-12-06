@@ -17,7 +17,7 @@
 
 ## Kontribusi
 
-Dibuat oleh Firja Rakha Adwittya.
+Dibuat oleh Muhammad Rachel Fathan Idzhany.
 
 ## Lisensi
 
