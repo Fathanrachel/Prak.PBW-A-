@@ -1,6 +1,6 @@
 <x-app-layout>
     @slot('title', 'My stores')
-
+    
     <x-slot name="header">
         <h2 class="font-semibold text-xl leading-tight">
             {{ __('My stores') }}
@@ -19,7 +19,5 @@
                 You haven't make any store yet.
             </p>
         @endif
-
-
     </x-container>
 </x-app-layout>

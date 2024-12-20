@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models;
-use App\Models\Role;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Role;
+use App\Models\User;
 
 class RoleSeeder extends Seeder
 {
@@ -14,21 +14,21 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = Models\User::create([
-            'name' => 'Admin',
-            'email' => 'rakha2@gmail.com',
-            'password' => bcrypt('password'),
+        $user = User::create([
+            'name' => 'M Rachel Fathan I',
+            'email' => 'racheltambunan10@gmail.com',
+            'password' => bcrypt('user1234'),
             'email_verified_at' => now()
         ]);
 
-        Models\User::factory(10)->create();
+        User::factory(10)->create();
         
         collect([
             ['name' => 'admin'],
             ['name' => 'partner'],
-        ])->each(fn($role) => Models\Role::create($role));
+        ])->each(fn($role) => Role::create($role));
 
-        $user = Models\User::find(2);
+        $user = User::find(2);
 
         $user->assignRole(Role::find(1));
         $user->assignRole(Role::find(2));

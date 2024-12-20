@@ -3,14 +3,14 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl leading-tight">
-            {{ __('Home') }}
+            {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
-    <x-container class="">
-        <div class="bg-zinc-80 overflow-hidden shadow-sm sm:rounded-lg">
+    <x-container>
+        <div class="bg-zinc-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6">
-                Homepage
+                {{ __("You're logged in!") }}
             </div>
         </div>
     </x-container>

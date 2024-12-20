@@ -11,7 +11,7 @@ class StoreObserver
 {
     public function creating(Store $store): void
     {
-        $$store->slug = str()->slug($store->name);
+        $store->slug = str()->slug($store->name);
         $store->status = Gate::check('isPartner') ? StoreStatus::ACTIVE : StoreStatus::PENDING;
     }
 }

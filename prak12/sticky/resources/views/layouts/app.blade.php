@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ isset($title) ? $title . '/' . config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>
+        <title>{{ isset($title) ? $title.' / '.config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,7 +20,7 @@
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-zinc-900 border-b border-zinc-800 shadow mb-6 lg:mb-12">
+                <header class="bg-zinc-900 border-b border-zinc-800 mb-12 shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -29,13 +29,10 @@
 
             <!-- Page Content -->
             <main>
-                <div class="p-6">
-                    {{ $slot }}
-                </div>
+                {{ $slot }}
             </main>
-        </div>
 
-        <x-footer/>
-        {{-- @include('layouts.footer') --}}
+            <x-footer></x-footer>
+        </div>
     </body>
 </html>
